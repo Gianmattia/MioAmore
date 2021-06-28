@@ -1,3 +1,6 @@
+
+
+
 package logic.web.controller;
 
 import java.io.IOException;
@@ -73,13 +76,13 @@ public class TastoMapArtista extends HttpServlet {
 		else {
 			MapController mc = new MapController();
 			try {
-				try {
+				
 					mc.submitEvent(name, place, desc);
 				} catch (DescriptionTooLongException e) {
 					
 					e.printStackTrace();
 				}
-			} catch (EmptyFieldException e) {
+			 catch (EmptyFieldException e) {
 				e.printStackTrace();
 			}
 			
@@ -93,3 +96,4 @@ public class TastoMapArtista extends HttpServlet {
 	
 
 }
+
